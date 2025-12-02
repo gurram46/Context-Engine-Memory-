@@ -2,8 +2,8 @@ export interface AppConfig {
     geminiApiKey?: string;
 }
 
-// User provided key
-const DEFAULT_API_KEY = 'AIzaSyA5bqhdSVAJkztYe-8cBOI-MnHerHJcwJ0';
+// No default API key - users must provide their own
+const DEFAULT_API_KEY = '';
 
 export const getAppConfig = async (): Promise<AppConfig> => {
     if (typeof chrome === 'undefined' || !chrome.storage) {
